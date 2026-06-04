@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diego Dongo | Programador en Arequipa, Perú</title>
+
+  <!-- SEO básico -->
+  <meta name="description" content="Diego Dongo, programador de Arequipa, Perú. Apasionado por la computación, videojuegos como Elden Ring, el jiu-jitsu brasileño y la vida.">
+  <meta name="keywords" content="Diego Dongo, programador Arequipa, desarrollador Perú, Elden Ring, BJJ Arequipa, jiu-jitsu brasileño, programador peruano">
+  <meta name="author" content="Diego Dongo">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Spanish">
+  <meta name="revisit-after" content="7 days">
+  <link rel="canonical" href="https://mondonguitou.github.io">
+
+  <!-- Open Graph (para compartir en redes sociales) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Diego Dongo | Programador en Arequipa">
+  <meta property="og:description" content="Programador peruano apasionado por la computación, Elden Ring, el BJJ y la vida.">
+  <meta property="og:url" content="https://mondonguitou.github.io">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="Diego Dongo">
+
+  <!-- Twitter Card (para compartir en X/Twitter) -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Diego Dongo | Programador en Arequipa">
+  <meta name="twitter:description" content="Programador peruano apasionado por la computación, Elden Ring, el BJJ y la vida.">
+
+  <!-- Datos estructurados (le dice a Google quién eres) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Diego Dongo",
+    "jobTitle": "Programador",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Arequipa",
+      "addressCountry": "PE"
+    },
+    "url": "https://mondonguitou.github.io",
+    "knowsAbout": ["Programación", "Videojuegos", "Elden Ring", "Jiu-jitsu brasileño"]
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d0d;
+      --surface: #161616;
+      --card: #1c1c1c;
+      --border: #2a2a2a;
+      --accent: #c8a96e;
+      --accent2: #e8c97e;
+      --text: #f0ece0;
+      --muted: #888880;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 40% at 50% 60%, rgba(200,169,110,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-tag {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--border);
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(5rem, 16vw, 12rem);
+      line-height: 0.9;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+
+    .hero-name span {
+      display: block;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 400px;
+      line-height: 1.7;
+    }
+
+    .scroll-hint {
+      margin-top: 4rem;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .scroll-hint::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--muted), transparent);
+    }
+
+    /* SECTION */
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* INTERESTS GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .card {
+      background: var(--card);
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: background 0.2s;
+    }
+
+    .card:hover { background: #222; }
+
+    .card-icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .card-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ABOUT */
+    .about-text {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: var(--text);
+      max-width: 640px;
+    }
+
+    .about-text strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2rem;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+    }
+
+    /* DIVIDER */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-tag">Arequipa, Perú</div>
+    <h1 class="hero-name">
+      Diego
+      <span>Dongo</span>
+    </h1>
+    <p class="hero-sub">Programador, gamer, luchador y amante de la vida.</p>
+    <div class="scroll-hint">scroll</div>
+  </div>
+
+  <section>
+    <div class="section-label">Sobre mí</div>
+    <p class="about-text">
+      Soy <strong>Diego Dongo</strong>, un programador apasionado por la tecnología y todo lo que la rodea.
+      Me muevo entre el código, los videojuegos, el tatami y la vida misma.
+      Vivo en Arequipa y me tomo la existencia con intensidad.
+    </p>
+  </section>
+
+  <hr class="divider" />
+
+  <section>
+    <div class="section-label">Mis intereses</div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">💻</div>
+        <div class="card-title">Computación</div>
+        <div class="card-desc">Me apasiona el mundo del software, los algoritmos y construir cosas con código desde cero.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎮</div>
+        <div class="card-title">Videojuegos</div>
+        <div class="card-desc">Elden Ring es mi obsesión. El lore, el desafío, la arquitectura del mundo — todo es obra maestra.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🥋</div>
+        <div class="card-title">BJJ</div>
+        <div class="card-desc">El jiu-jitsu brasileño me enseña disciplina, paciencia y la habilidad de dominar bajo presión.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">❤️</div>
+        <div class="card-title">Las mujeres</div>
+        <div class="card-desc">Deaaah. No hay más que agregar.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Diego Dongo — Arequipa, Perú
+  </footer>
+
+</body>
+</html>
