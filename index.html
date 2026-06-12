@@ -60,41 +60,45 @@
       line-height: 1.5;
     }
 
-    /* Profesores */
-    .professors-list {
-      list-style: none;
-      padding-left: 0;
+    /* Profesores — filas horizontales */
+    .professors-table {
+      width: 100%;
+      margin-top: 12px;
+      border-collapse: collapse;
     }
-    .professor-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 12px;
+    .professors-table tr {
+      border-bottom: 1px solid #eee;
     }
-    .professor-name {
+    .professors-table tr:last-child {
+      border-bottom: none;
+    }
+    .professors-table td {
+      padding: 10px 0;
+      vertical-align: middle;
+      font-size: 0.9rem;
+    }
+    .prof-col-name {
       color: #222;
-      font-size: 0.95rem;
+      font-weight: 500;
+      width: 40%;
     }
-    .linkedin-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 0.78rem;
+    .prof-col-course {
+      color: #888;
+      font-size: 0.85rem;
+      width: 45%;
+    }
+    .prof-col-link {
+      text-align: right;
+      width: 15%;
+    }
+    .prof-col-link a {
       color: #0066cc;
+      font-size: 0.82rem;
       text-decoration: none;
-      border: 1px solid #cce0ff;
-      border-radius: 4px;
-      padding: 2px 7px;
       white-space: nowrap;
     }
-    .linkedin-badge:hover {
-      background: #f0f7ff;
-    }
-    .linkedin-badge svg {
-      width: 12px;
-      height: 12px;
-      fill: #0a66c2;
-      flex-shrink: 0;
+    .prof-col-link a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -105,7 +109,7 @@
 
   <h2>Sobre mí</h2>
   <p>
-    Estudiante de CS con interés en desarrollo de software, IA y ciberseguridad.
+    Estudiante de CS con interés en desarrollo de software y algoritmos.
     Fuera del código: Brazilian jiu-jitsu, videojuegos y autos.
   </p>
 
@@ -120,43 +124,64 @@
   <h2>Cursos</h2>
   <ul class="courses-list">
     <li class="course-item">
-      <div class="course-name">Fundamentos Matemáticos para Programación</div>
-      <div class="course-desc">Lógica proposicional, teoría de conjuntos, relaciones, aritmética modular y fundamentos de matemática discreta aplicados a la computación.</div>
+      <div class="course-name">Introducción a la Computación</div>
+      <div class="course-desc">Conceptos fundacionales de la computación: arquitectura de computadores, sistemas operativos, redes y representación de datos.</div>
     </li>
     <li class="course-item">
-      <div class="course-name">Programación</div>
-      <div class="course-desc">Diseño e implementación de programas en Python: estructuras de control, funciones, manejo de listas y matrices, y resolución de problemas computacionales.</div>
+      <div class="course-name">Fundamentos Matemáticos para la Computación</div>
+      <div class="course-desc">Lógica proposicional, teoría de conjuntos, relaciones, aritmética modular y matemática discreta aplicada a la computación.</div>
     </li>
     <li class="course-item">
-      <div class="course-name">Introducción a Ciencias de la Computación</div>
-      <div class="course-desc">Conceptos fundacionales de la computación: arquitectura de computadores, sistemas operativos, redes, representación de datos y complejidad algorítmica.</div>
+      <div class="course-name">Fundamentos de Programación</div>
+      <div class="course-desc">Diseño e implementación de programas en Python: estructuras de control, funciones, listas, matrices y resolución de problemas.</div>
+    </li>
+    <li class="course-item">
+      <div class="course-name">Introducción a la Vida Universitaria</div>
+      <div class="course-desc">Habilidades de estudio, adaptación al entorno universitario y desarrollo de competencias académicas y personales.</div>
+    </li>
+    <li class="course-item">
+      <div class="course-name">Comunicación</div>
+      <div class="course-desc">Comprensión y producción de textos académicos, argumentación y comunicación oral y escrita en contextos profesionales.</div>
+    </li>
+    <li class="course-item">
+      <div class="course-name">Lógica</div>
+      <div class="course-desc">Razonamiento formal, tablas de verdad, proposiciones, inferencias válidas y fundamentos del pensamiento lógico.</div>
     </li>
   </ul>
 
   <h2>Profesores</h2>
-  <ul class="professors-list">
-    <li class="professor-item">
-      <span class="professor-name">Rosmery Quispe Zavala</span>
-      <a class="linkedin-badge" href="https://www.linkedin.com/in/rosmery-violeta-quispe-zavala-58374638/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.985V9h3.102v1.561h.046c.432-.818 1.487-1.681 3.062-1.681 3.274 0 3.878 2.155 3.878 4.958v6.614zM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm1.603 13.019H3.733V9h3.207v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </li>
-    <li class="professor-item">
-      <span class="professor-name">Ernesto Cuadros Vargas</span>
-      <a class="linkedin-badge" href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.985V9h3.102v1.561h.046c.432-.818 1.487-1.681 3.062-1.681 3.274 0 3.878 2.155 3.878 4.958v6.614zM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm1.603 13.019H3.733V9h3.207v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </li>
-    <li class="professor-item">
-      <span class="professor-name">Julissa Villanueva Llerena</span>
-      <a class="linkedin-badge" href="https://www.linkedin.com/in/julissa-villanueva-llerena/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.985V9h3.102v1.561h.046c.432-.818 1.487-1.681 3.062-1.681 3.274 0 3.878 2.155 3.878 4.958v6.614zM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm1.603 13.019H3.733V9h3.207v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </li>
-  </ul>
+  <table class="professors-table">
+    <tr>
+      <td class="prof-col-name">Ernesto Cuadros Vargas</td>
+      <td class="prof-col-course">Introducción a la Computación</td>
+      <td class="prof-col-link"><a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" rel="noopener">LinkedIn →</a></td>
+    </tr>
+    <tr>
+      <td class="prof-col-name">Luis Diaz Basurco</td>
+      <td class="prof-col-course">Fundamentos Matemáticos</td>
+      <td class="prof-col-link"><a href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=11109" target="_blank" rel="noopener">Concytec →</a></td>
+    </tr>
+    <tr>
+      <td class="prof-col-name">Julissa Villanueva Llerena</td>
+      <td class="prof-col-course">Fundamentos de Programación</td>
+      <td class="prof-col-link"><a href="https://www.linkedin.com/in/julissa-villanueva-llerena/" target="_blank" rel="noopener">LinkedIn →</a></td>
+    </tr>
+    <tr>
+      <td class="prof-col-name">Gabriela Ponce Reinoso</td>
+      <td class="prof-col-course">Intro. a la Vida Universitaria</td>
+      <td class="prof-col-link"><a href="https://www.linkedin.com/in/gabriela-ponce-reinoso-885922127/" target="_blank" rel="noopener">LinkedIn →</a></td>
+    </tr>
+    <tr>
+      <td class="prof-col-name">Ángel Rodríguez Cruz</td>
+      <td class="prof-col-course">Comunicación</td>
+      <td class="prof-col-link"><a href="https://www.linkedin.com/in/angel-rodriguez-cruz-58b78b85/" target="_blank" rel="noopener">LinkedIn →</a></td>
+    </tr>
+    <tr>
+      <td class="prof-col-name">Kristel Loayza Cruz</td>
+      <td class="prof-col-course">Lógica</td>
+      <td class="prof-col-link"><a href="https://www.perucris.pe/entities/person/baf51ed2-70c0-427d-8fdd-b3487c45b778/details" target="_blank" rel="noopener">PeruCris →</a></td>
+    </tr>
+  </table>
 
   <h2>Contacto</h2>
   <ul>
